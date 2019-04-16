@@ -1,5 +1,5 @@
-## Building an AVR application to communicate with U(S)ART peripheral
-This project walks you through the process building an AVR application to exercise the usart peripheral on teh ATMega328p microcontroller.
+## Building an AVR application to communicate with the USART peripheral
+This project walks you through the process building an AVR application to exercise the usart peripheral on the ATMega328p microcontroller.
 
 ### Prerequisites:
 
@@ -27,7 +27,7 @@ avrdude -v
 ```
 
 ### The code
-The code below initializes the led/clock/usart modules and prepares them for use. The while loop accumulates data on the usart prot until a charage return is received. Once received the console echos back the data received. The module also toggles a led on the board every second. 
+The code below initializes the led/clock/usart modules and prepares them for use. The while loop accumulates data on the USART port until a carriage return is received. Once received the console echoes back the data received. The module also toggles a led on the microcontroller once per second. 
 
 ```c++
 void main()
@@ -53,7 +53,7 @@ void main()
 }
 ```
 
-Notice the line of code listed below. This sets the global interrupt flag in SREG to allow interrupts. Since we're using the AVR's service interrupt routine to detect data on the USART line we need to set this flag.
+Notice the line of code listed below. This sets the global interrupt flag in SREG enabling interrupts. Since we are using the AVR's service interrupt routine to detect data on the USART line we need to set this flag.
 ```c++
 sei();
 ```
@@ -72,7 +72,6 @@ Now that we compiled the code we can deploy to our microcontroller.
 ```console
 make flash
 ```
-
 
 
 #### References:
