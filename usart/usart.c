@@ -130,8 +130,7 @@ void usart_transmit_string(char * data)
 ISR(USART_RX_vect)
 {
 	char data = UDR0;
-	//if (btle_rx_cb != 0) btle_rx_cb(data);
+
 	usart_put_char(data);
 
-	//if (btle_rx_cb != 0) btle_rx_cb(data);
 }

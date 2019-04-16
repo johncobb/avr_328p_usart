@@ -45,17 +45,6 @@ void usart_driver_tick()
 			// reset usart_lines
 			init_lines();
 
-			// the following code is for parsing tokens
-			/*
-			char *ptr = NULL;
-
-			if(parse_data(USART_TKSTART, &ptr) == USART_TKFOUND) {
-				// TODO: handle the message
-				//btle_msg_t msg = btle_handle_le_packet(ptr);
-
-				init_lines();
-			}
-			*/
 		}
 	}
 }
