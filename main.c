@@ -24,7 +24,7 @@ volatile clock_time_t future = 0;
 bool timeout();
 void set_timer(clock_time_t timeout);
 
-void main()
+int main()
 {
 	// led port
 	DDRB |= _BV(PB5);
@@ -44,6 +44,8 @@ void main()
 			set_timer(1000);
 		}
 	}
+
+	return 0;
 }
 
 
