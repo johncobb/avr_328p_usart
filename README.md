@@ -59,7 +59,7 @@ sei();
 ```
 
 ### Compiling the code
-To compile our source code we want to create a build script to autmoate the process. This script also converts the object files to avr compatible hex format. This hex file is then used to update the code on the microcontroller. To compile the code run the make file from the command line.
+To compile our source code we want to create a Makefile to autmoate the process. The Makefile also converts the object files to avr compatible hex format. This hex file is then used to update the code on the microcontroller. To compile the code run the Makefile by issuing the following command:
 
 ```console
 make
