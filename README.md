@@ -90,6 +90,10 @@ make flash
 ```
 
 
+### Summary
+As you can see adding USART peripherals is pretty straight forward. USART will open up a whole new world of communication possibilities for your microcontroller project. Make sure to read the datasheet of the peripheral you are working with to ensure voltage levels are within spec. You may have to add addtional logic level shifting circuitry to your design. This may sound complex at first but in many cases is pretty straight forward. Google is your friend.
+
+
 #### References:
 https://github.com/osx-cross/homebrew-avr
 
