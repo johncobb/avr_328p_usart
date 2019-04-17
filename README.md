@@ -1,3 +1,5 @@
+![Code](https://raw.githubusercontent.com/johncobb/spike_328p_blinky/master/img/isr_code.png)
+
 ## Building an AVR application to communicate with the USART peripheral
 This project walks you through the process building an AVR application to exercise the usart peripheral on the ATMega328p microcontroller. The USART peripheral can be used to interface with many different types of sensors, modems, ic(s), and microcontrollers. Refer to your microcontroller's datasheet to determine optiomal baud rate to ensure maximum data rate and minimal error rate.
 

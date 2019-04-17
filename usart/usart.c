@@ -132,5 +132,4 @@ ISR(USART_RX_vect)
 	char data = UDR0;
 
 	usart_put_char(data);
-
 }
