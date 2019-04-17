@@ -1,5 +1,5 @@
 ## Building an AVR application to communicate with the USART peripheral
-This project walks you through the process building an AVR application to exercise the usart peripheral on the ATMega328p microcontroller.
+This project walks you through the process building an AVR application to exercise the usart peripheral on the ATMega328p microcontroller. The USART peripheral can be used to interface with many different types of sensors, modems, ic(s), and microcontrollers. Refer to your microcontroller's datasheet to determine optiomal baud rate to ensure maximum data rate and minimal error rate.
 
 ### Prerequisites:
 
@@ -59,14 +59,30 @@ sei();
 ```
 
 ### Compiling the code
-To compile our source code we want to create a Makefile to autmoate the process. The Makefile also converts the object files to avr compatible hex format. This hex file is then used to update the code on the microcontroller. To compile the code run the Makefile by issuing the following command:
+To compile the source code we need to create a Makefile to autmoate the process. Makefiles allow us to place all build/clean/flash commands into one easy to use file. Each microcontroller has a unique set of parameters prior to compiling and deploying. These commands are listed a the top of the Makefile and are easily changed.
+
+Below is a snippet of Makefile parametes that would be changed to target your project.
+```console
+# parameters (make changes accordingly)
+# project name
+PRJ = main
+# avr mcu
+MCU = atmega328p
+# mcu clock frequency
+CLK = 16000000
+# avr programmer (and port if necessary)
+# e.g. PRG = usbtiny -or- PRG = arduino -P /dev/tty.usbmodem411
+PRG = usbtiny
+```
+
+Now that your Makefile is complete issue the make from the command start the build process.
 
 ```console
 make
 ```
 
 
-### Running the code
+### Loading the code
 Now that we compiled the code we can deploy to our microcontroller.
 
 ```console
